@@ -51,7 +51,7 @@ class ImageSelectionField extends OptionsetField
     public function Field($properties = [])
     {
         Requirements::css(
-            "nswdpc/silverstripe-imageselection-field:client/static/styles/field.css"
+            "goldfinch/silverstripe-imageselection-field:client/static/styles/field.css"
         );
         return parent::Field($properties);
     }

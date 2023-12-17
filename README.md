@@ -1,5 +1,7 @@
 # Image Selection field for Silverstripe
 
+* SS5 compatible fork of [nswdpc/silverstripe-imageselection-field](https://github.com/nswdpc/silverstripe-imageselection-field)
+
 This is a basic radio selection field, each item in the set of options can have an image associated with it.
 
 Useful for allowing people to select an option based on an image.
@@ -26,7 +28,7 @@ $sampleImageField = ImageSelectionField::create(
 ## Installation
 
 ```sh
-composer require nswdpc/silverstripe-imageselection-field
+composer require goldfinch/silverstripe-imageselection-field
 ```
 
 ## License
