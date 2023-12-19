@@ -1,45 +1,44 @@
-/**
- * Default CSS for imageselection field
- */
 .imageselection ul {
   display: flex;
-  flex-flow: row wrap;
-  gap: 1em;
-}
-
-.imageselection > * > * > label {
-  display : block;
-  margin : 0;
-  padding : 0;
-  cursor: pointer;
-  border : none;
-  position: relative;
-}
-
-.imageselection > * > * > label > input[type=radio] {
-  position: absolute;
-  top: 1rem;
-  left: 1rem;
+  flex-wrap: wrap;
+  list-style: none;
   padding: 0;
   margin: 0;
-  transform: scale(2);
 }
 
-.imageselection > * > * > label > .image {
-  overflow: hidden;
+.imageselection ul li {
+  margin: 0 10px 10px 0;
+  padding: 0;
 }
-
-.imageselection > * > * > label > .image > img {
+.imageselection ul li input {
+  position: absolute !important;
+  visibility: hidden;
+}
+.imageselection ul li label {
+  cursor: pointer;
   display: block;
-  margin : 0;
-  padding : 0;
-  background-color: transparent;
-  pointer-events: none;
-  border : none;
+}
+.imageselection ul li label .image {
+  width: 160px;
+  height: 120px;
+}
+.imageselection ul li label .image p {
+  margin-top: 10px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  display: none;
+}
+.imageselection ul li label .image img {
+  opacity: 0.25;
+  display: block;
+  border-radius: 5px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity .3s ease-in-out;
 }
 
-.imageselection > * > * > label > .image .title {
-  font-size: 90%;
-  margin: 0;
-  padding: 0.25em;
+.imageselection ul li input:checked + label .image img {
+  opacity: 1;
 }
